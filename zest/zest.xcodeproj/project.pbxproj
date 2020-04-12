@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F700243BC8820071FCC6 /* AppDelegate.swift */; };
+		3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F702243BC8820071FCC6 /* SceneDelegate.swift */; };
+		3996F708243BC8820071FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3996F706243BC8820071FCC6 /* Main.storyboard */; };
+		3996F70A243BC8840071FCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3996F709243BC8840071FCC6 /* Assets.xcassets */; };
+		3996F70D243BC8840071FCC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3996F70B243BC8840071FCC6 /* LaunchScreen.storyboard */; };
+		3996F718243BC8840071FCC6 /* zestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F717243BC8840071FCC6 /* zestTests.swift */; };
+		3996F723243BC8840071FCC6 /* zestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F722243BC8840071FCC6 /* zestUITests.swift */; };
+		3996F734243C175C0071FCC6 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F733243C175C0071FCC6 /* RecipeModel.swift */; };
+		3996F736243C176A0071FCC6 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F735243C176A0071FCC6 /* Recipe.swift */; };
+		3996F7382443A5910071FCC6 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7372443A5910071FCC6 /* RecipeViewController.swift */; };
+		3996F73A2443AA940071FCC6 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7392443AA940071FCC6 /* RecipeCell.swift */; };
+		3996F73D2443AF0E0071FCC6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3996F73C2443AF0E0071FCC6 /* Kingfisher */; };
+		3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */; };
+		3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7422443C03B0071FCC6 /* TableViewCell.swift */; };
+		3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3996F714243BC8840071FCC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3996F6F5243BC8820071FCC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3996F6FC243BC8820071FCC6;
+			remoteInfo = zest;
+		};
+		3996F71F243BC8840071FCC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3996F6F5243BC8820071FCC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3996F6FC243BC8820071FCC6;
+			remoteInfo = zest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3996F6FD243BC8820071FCC6 /* zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3996F700243BC8820071FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3996F702243BC8820071FCC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3996F707243BC8820071FCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3996F709243BC8840071FCC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3996F70C243BC8840071FCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3996F70E243BC8840071FCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3996F713243BC8840071FCC6 /* zestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3996F717243BC8840071FCC6 /* zestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zestTests.swift; sourceTree = "<group>"; };
+		3996F719243BC8840071FCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3996F71E243BC8840071FCC6 /* zestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3996F722243BC8840071FCC6 /* zestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zestUITests.swift; sourceTree = "<group>"; };
+		3996F724243BC8840071FCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3996F733243C175C0071FCC6 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		3996F735243C176A0071FCC6 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		3996F7372443A5910071FCC6 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		3996F7392443AA940071FCC6 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		3996F7422443C03B0071FCC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3996F6FA243BC8820071FCC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3996F73D2443AF0E0071FCC6 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F710243BC8840071FCC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F71B243BC8840071FCC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3996F6F4243BC8820071FCC6 = {
+			isa = PBXGroup;
+			children = (
+				3996F6FF243BC8820071FCC6 /* zest */,
+				3996F716243BC8840071FCC6 /* zestTests */,
+				3996F721243BC8840071FCC6 /* zestUITests */,
+				3996F6FE243BC8820071FCC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3996F6FE243BC8820071FCC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3996F6FD243BC8820071FCC6 /* zest.app */,
+				3996F713243BC8840071FCC6 /* zestTests.xctest */,
+				3996F71E243BC8840071FCC6 /* zestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3996F6FF243BC8820071FCC6 /* zest */ = {
+			isa = PBXGroup;
+			children = (
+				3996F732243BC8BB0071FCC6 /* Controller */,
+				3996F731243BC8B70071FCC6 /* View */,
+				3996F730243BC8B30071FCC6 /* Model */,
+				3996F700243BC8820071FCC6 /* AppDelegate.swift */,
+				3996F702243BC8820071FCC6 /* SceneDelegate.swift */,
+				3996F709243BC8840071FCC6 /* Assets.xcassets */,
+				3996F70B243BC8840071FCC6 /* LaunchScreen.storyboard */,
+				3996F70E243BC8840071FCC6 /* Info.plist */,
+			);
+			path = zest;
+			sourceTree = "<group>";
+		};
+		3996F716243BC8840071FCC6 /* zestTests */ = {
+			isa = PBXGroup;
+			children = (
+				3996F717243BC8840071FCC6 /* zestTests.swift */,
+				3996F719243BC8840071FCC6 /* Info.plist */,
+			);
+			path = zestTests;
+			sourceTree = "<group>";
+		};
+		3996F721243BC8840071FCC6 /* zestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3996F722243BC8840071FCC6 /* zestUITests.swift */,
+				3996F724243BC8840071FCC6 /* Info.plist */,
+			);
+			path = zestUITests;
+			sourceTree = "<group>";
+		};
+		3996F730243BC8B30071FCC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3996F733243C175C0071FCC6 /* RecipeModel.swift */,
+				3996F735243C176A0071FCC6 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3996F731243BC8B70071FCC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3996F706243BC8820071FCC6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3996F732243BC8BB0071FCC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3996F7372443A5910071FCC6 /* RecipeViewController.swift */,
+				3996F7392443AA940071FCC6 /* RecipeCell.swift */,
+				3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */,
+				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
+				3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3996F6FC243BC8820071FCC6 /* zest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3996F727243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zest" */;
+			buildPhases = (
+				3996F6F9243BC8820071FCC6 /* Sources */,
+				3996F6FA243BC8820071FCC6 /* Frameworks */,
+				3996F6FB243BC8820071FCC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zest;
+			packageProductDependencies = (
+				3996F73C2443AF0E0071FCC6 /* Kingfisher */,
+			);
+			productName = zest;
+			productReference = 3996F6FD243BC8820071FCC6 /* zest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3996F712243BC8840071FCC6 /* zestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3996F72A243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestTests" */;
+			buildPhases = (
+				3996F70F243BC8840071FCC6 /* Sources */,
+				3996F710243BC8840071FCC6 /* Frameworks */,
+				3996F711243BC8840071FCC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3996F715243BC8840071FCC6 /* PBXTargetDependency */,
+			);
+			name = zestTests;
+			productName = zestTests;
+			productReference = 3996F713243BC8840071FCC6 /* zestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3996F71D243BC8840071FCC6 /* zestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3996F72D243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestUITests" */;
+			buildPhases = (
+				3996F71A243BC8840071FCC6 /* Sources */,
+				3996F71B243BC8840071FCC6 /* Frameworks */,
+				3996F71C243BC8840071FCC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3996F720243BC8840071FCC6 /* PBXTargetDependency */,
+			);
+			name = zestUITests;
+			productName = zestUITests;
+			productReference = 3996F71E243BC8840071FCC6 /* zestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3996F6F5243BC8820071FCC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Mai Dang";
+				TargetAttributes = {
+					3996F6FC243BC8820071FCC6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3996F712243BC8840071FCC6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3996F6FC243BC8820071FCC6;
+					};
+					3996F71D243BC8840071FCC6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3996F6FC243BC8820071FCC6;
+					};
+				};
+			};
+			buildConfigurationList = 3996F6F8243BC8820071FCC6 /* Build configuration list for PBXProject "zest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3996F6F4243BC8820071FCC6;
+			packageReferences = (
+				3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = 3996F6FE243BC8820071FCC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3996F6FC243BC8820071FCC6 /* zest */,
+				3996F712243BC8840071FCC6 /* zestTests */,
+				3996F71D243BC8840071FCC6 /* zestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3996F6FB243BC8820071FCC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3996F70D243BC8840071FCC6 /* LaunchScreen.storyboard in Resources */,
+				3996F70A243BC8840071FCC6 /* Assets.xcassets in Resources */,
+				3996F708243BC8820071FCC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F711243BC8840071FCC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F71C243BC8840071FCC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3996F6F9243BC8820071FCC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3996F734243C175C0071FCC6 /* RecipeModel.swift in Sources */,
+				3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */,
+				3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */,
+				3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */,
+				3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */,
+				3996F73A2443AA940071FCC6 /* RecipeCell.swift in Sources */,
+				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
+				3996F736243C176A0071FCC6 /* Recipe.swift in Sources */,
+				3996F7382443A5910071FCC6 /* RecipeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F70F243BC8840071FCC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3996F718243BC8840071FCC6 /* zestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3996F71A243BC8840071FCC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3996F723243BC8840071FCC6 /* zestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3996F715243BC8840071FCC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3996F6FC243BC8820071FCC6 /* zest */;
+			targetProxy = 3996F714243BC8840071FCC6 /* PBXContainerItemProxy */;
+		};
+		3996F720243BC8840071FCC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3996F6FC243BC8820071FCC6 /* zest */;
+			targetProxy = 3996F71F243BC8840071FCC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3996F706243BC8820071FCC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3996F707243BC8820071FCC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3996F70B243BC8840071FCC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3996F70C243BC8840071FCC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3996F725243BC8840071FCC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3996F726243BC8840071FCC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3996F728243BC8840071FCC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3996F729243BC8840071FCC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3996F72B243BC8840071FCC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zest.app/zest";
+			};
+			name = Debug;
+		};
+		3996F72C243BC8840071FCC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zest.app/zest";
+			};
+			name = Release;
+		};
+		3996F72E243BC8840071FCC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = zest;
+			};
+			name = Debug;
+		};
+		3996F72F243BC8840071FCC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = zestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = zest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3996F6F8243BC8820071FCC6 /* Build configuration list for PBXProject "zest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3996F725243BC8840071FCC6 /* Debug */,
+				3996F726243BC8840071FCC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3996F727243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3996F728243BC8840071FCC6 /* Debug */,
+				3996F729243BC8840071FCC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3996F72A243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3996F72B243BC8840071FCC6 /* Debug */,
+				3996F72C243BC8840071FCC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3996F72D243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3996F72E243BC8840071FCC6 /* Debug */,
+				3996F72F243BC8840071FCC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3996F73C2443AF0E0071FCC6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3996F6F5243BC8820071FCC6 /* Project object */;
+}
