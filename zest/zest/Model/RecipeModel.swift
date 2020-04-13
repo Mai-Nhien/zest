@@ -14,11 +14,13 @@ class RecipeModel {
     var recipeResults: [Recipe]
     var fridge: [String]
     private var fileLocation: URL!
+    let ACCESS_KEY = "052a4b2f0bef41138415628709c0d811"
+    let BASE_URL = "https://api.spoonacular.com/"
     
     init () {
         savedRecipes = []
         recipeResults = []
-        fridge = []
+        fridge = ["eggs", "milk", "flour"]
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         fileLocation = documentsDirectory.appendingPathComponent("recipes.json")
@@ -55,5 +57,24 @@ class RecipeModel {
     
     func getSavedRecipes() -> [Recipe] {
         return savedRecipes
+    }
+    
+    func getNewRecipes(onSuccess: @escaping ([Recipe]) -> Void) {
+        if let url = URL(string: "\(BASE_URL)recipes/complexSearch") {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.setValue("Client-ID \(ACCESS_KEY)",
+            forHTTPHeaderField: "Authorization")
+            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let data = data {
+                    do {
+                        var tempRecipes: [Recipe] = []
+                        tempRecipes = try JSONDecoder().decode([Recipe].self, from: data)
+                        onSuccess(tempRecipes)
+                    } catch {
+                        exit(1)
+                    }
+                }
+            }.resume()
+        }
     }
 }

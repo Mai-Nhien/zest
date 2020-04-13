@@ -22,6 +22,7 @@
 		3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */; };
 		3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7422443C03B0071FCC6 /* TableViewCell.swift */; };
 		3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */; };
+		3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		3996F7422443C03B0071FCC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */,
 				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
 				3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */,
+				3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */,
 				3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */,
 				3996F73A2443AA940071FCC6 /* RecipeCell.swift in Sources */,
+				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
 				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
 				3996F736243C176A0071FCC6 /* Recipe.swift in Sources */,
 				3996F7382443A5910071FCC6 /* RecipeViewController.swift in Sources */,
