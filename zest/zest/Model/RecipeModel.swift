@@ -20,7 +20,7 @@ class RecipeModel {
     init () {
         savedRecipes = []
         recipeResults = []
-        fridge = ["eggs", "milk", "flour"]
+        fridge = ["eggs", "flour", "sugar"]
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         fileLocation = documentsDirectory.appendingPathComponent("recipes.json")
@@ -60,15 +60,15 @@ class RecipeModel {
     }
     
     func getNewRecipes(onSuccess: @escaping ([Recipe]) -> Void) {
-        if let url = URL(string: "\(BASE_URL)recipes/complexSearch") {
-            var urlRequest = URLRequest(url: url)
-            urlRequest.setValue("Client-ID \(ACCESS_KEY)",
-            forHTTPHeaderField: "Authorization")
+        let recipeList = fridge.joined(separator: ",")
+        if let url = URL(string: "\(BASE_URL)recipes/complexSearch?includeIngredients=\(recipeList)&addRecipeInformation=true&apiKey=\(ACCESS_KEY)") {
+            let urlRequest = URLRequest(url: url)
             URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                 if let data = data {
                     do {
                         var tempRecipes: [Recipe] = []
-                        tempRecipes = try JSONDecoder().decode([Recipe].self, from: data)
+                        let results = try JSONDecoder().decode(Result.self, from: data)
+                        tempRecipes = results.results
                         onSuccess(tempRecipes)
                     } catch {
                         exit(1)

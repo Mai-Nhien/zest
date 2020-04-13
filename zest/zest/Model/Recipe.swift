@@ -8,13 +8,20 @@
 
 import Foundation
 
+struct Result: Codable {
+    let results: [Recipe]
+    private enum CodingKeys: String, CodingKey {
+        case results = "results"
+    }
+}
+
 struct Recipe: Equatable, Codable {
     var title: String
     var image: String
     var sourceUrl: String?
     var spoonacularSourceUrl: String?
     var recipe: String?
-    var isCustom: Bool
+    var isCustom: Bool?
     
     init (title: String, image: String, recipe: String) {
         self.title = title

@@ -69,7 +69,7 @@ class RecipeTableViewController: UITableViewController {
                 let recipe = RecipeModel.shared.savedRecipes[selected]
                 recipeVC.heading = recipe.title
                 recipeVC.image = recipe.image
-                if recipe.isCustom {
+                if let check = recipe.isCustom, check == true {
                     if let recipeDetails = recipe.recipe {
                         recipeVC.details = recipeDetails
                     }

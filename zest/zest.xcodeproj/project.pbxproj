@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39792F992444F41800B96F25 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F982444F41800B96F25 /* DiscoverTableViewController.swift */; };
 		3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F700243BC8820071FCC6 /* AppDelegate.swift */; };
 		3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F702243BC8820071FCC6 /* SceneDelegate.swift */; };
 		3996F708243BC8820071FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3996F706243BC8820071FCC6 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39792F982444F41800B96F25 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		3996F6FD243BC8820071FCC6 /* zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3996F700243BC8820071FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3996F702243BC8820071FCC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
 				3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */,
 				3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */,
+				39792F982444F41800B96F25 /* DiscoverTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */,
 				3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */,
 				3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */,
+				39792F992444F41800B96F25 /* DiscoverTableViewController.swift in Sources */,
 				3996F73A2443AA940071FCC6 /* RecipeCell.swift in Sources */,
 				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
 				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
