@@ -41,7 +41,7 @@ class RecipeTableViewController: UITableViewController {
         if RecipeModel.shared.savedRecipes.count > 0 {
             let recipe = RecipeModel.shared.savedRecipes[indexPath.row]
             let url = URL(string: recipe.image)
-           // cell.recipeImage.kf.setImage(with: url)
+            cell.recipeImage.kf.setImage(with: url)
             cell.recipeTitle.text = recipe.title
         } else {
             cell.recipeTitle.text = "No Recipes"

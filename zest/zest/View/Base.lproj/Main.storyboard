@@ -145,7 +145,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="k4N-0b-TBr" id="kKD-vT-ipz"/>
+                                    <outlet property="recipeImage" destination="k4N-0b-TBr" id="AFs-c2-tME"/>
                                     <outlet property="recipeTitle" destination="1OJ-u5-bwb" id="17I-ch-2NO"/>
                                     <segue destination="8dU-L2-1LV" kind="show" identifier="showRecipe" id="sVi-gc-Lfd"/>
                                 </connections>
@@ -419,7 +419,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkk-pf-lP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4072" y="1552"/>
+            <point key="canvasLocation" x="4110" y="1552"/>
         </scene>
         <!--Discover-->
         <scene sceneID="nYC-Os-ce0">
