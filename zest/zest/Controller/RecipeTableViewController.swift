@@ -73,7 +73,12 @@ class RecipeTableViewController: UITableViewController {
                     if let recipeDetails = recipe.recipe {
                         recipeVC.details = recipeDetails
                     }
+                } else {
+                    if let recipeUrl = recipe.sourceUrl {
+                        recipeVC.details = recipeUrl
+                    }
                 }
+                recipeVC.recipeIndex = -1
             }
         } else if segue.identifier == "showAdd" {
             

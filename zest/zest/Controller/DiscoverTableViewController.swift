@@ -44,16 +44,16 @@ class DiscoverTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell")! as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell")! as! DiscoverCell
 
         // Get the recipe object
         if RecipeModel.shared.recipeResults.count > 0 {
             let recipe = RecipeModel.shared.recipeResults[indexPath.row]
             let url = URL(string: recipe.image)
-           // cell.recipeImage.kf.setImage(with: url)
-            cell.recipeTitle.text = recipe.title
+            cell.resultImage.kf.setImage(with: url)
+            cell.resultTitle.text = recipe.title
         } else {
-            cell.recipeTitle.text = "No Recipes"
+            cell.resultTitle.text = "No Recipes"
         }
        
         return cell
@@ -63,21 +63,17 @@ class DiscoverTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 
-//        if segue.identifier == "showRecipe" {
-//            let recipeVC = segue.destination as! RecipeDetailViewController
-//            if let selected = tableView.indexPathForSelectedRow?.row {
-//                let recipe = RecipeModel.shared.savedRecipes[selected]
-//                recipeVC.heading = recipe.title
-//                recipeVC.image = recipe.image
-//                if recipe.isCustom {
-//                    if let recipeDetails = recipe.recipe {
-//                        recipeVC.details = recipeDetails
-//                    }
-//                }
-//            }
-//        } else if segue.identifier == "showAdd" {
-//
-//        }
+        if segue.identifier == "showResult" {
+            let recipeVC = segue.destination as! RecipeDetailViewController
+            if let selected = tableView.indexPathForSelectedRow?.row {
+                let recipe = RecipeModel.shared.recipeResults[selected]
+                recipeVC.heading = recipe.title
+                recipeVC.image = recipe.image
+                if let sourceRecipe = recipe.sourceUrl {
+                    recipeVC.details = sourceRecipe
+                }
+                recipeVC.recipeIndex = selected
+            }
+        }
     }
-
 }

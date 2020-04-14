@@ -4,109 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Recipes-->
-        <scene sceneID="o5I-Q5-7P0">
-            <objects>
-                <collectionViewController id="Hxk-au-NXb" customClass="RecipeViewController" customModule="zest" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fka-Dl-zdW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BLn-yc-JlM">
-                            <size key="itemSize" width="261" height="194"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="H2J-YW-EZp" customClass="RecipeCell" customModule="zest" customModuleProvider="target">
-                                <rect key="frame" x="76.5" y="0.0" width="261" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jer-z0-t6z">
-                                    <rect key="frame" x="0.0" y="0.0" width="261" height="194"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPj-Qo-mOM">
-                                            <rect key="frame" x="0.0" y="0.0" width="261" height="163"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-yQ-EAb">
-                                            <rect key="frame" x="0.0" y="173" width="261" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="hC9-yQ-EAb" secondAttribute="trailing" id="7OY-1C-2Bu"/>
-                                        <constraint firstItem="BPj-Qo-mOM" firstAttribute="leading" secondItem="jer-z0-t6z" secondAttribute="leading" id="EHE-uh-cdl"/>
-                                        <constraint firstItem="hC9-yQ-EAb" firstAttribute="top" secondItem="BPj-Qo-mOM" secondAttribute="bottom" constant="10" id="Ldf-ug-oE7"/>
-                                        <constraint firstAttribute="trailing" secondItem="BPj-Qo-mOM" secondAttribute="trailing" id="MJ0-bO-WBu"/>
-                                        <constraint firstItem="hC9-yQ-EAb" firstAttribute="leading" secondItem="jer-z0-t6z" secondAttribute="leading" id="cHx-4g-gCP"/>
-                                        <constraint firstAttribute="bottom" secondItem="hC9-yQ-EAb" secondAttribute="bottom" id="eB3-l7-iom"/>
-                                        <constraint firstItem="BPj-Qo-mOM" firstAttribute="top" secondItem="jer-z0-t6z" secondAttribute="top" id="yIi-Ly-KXl"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="261" height="194"/>
-                                <connections>
-                                    <outlet property="recipeImage" destination="BPj-Qo-mOM" id="QLr-BC-1G2"/>
-                                    <outlet property="recipeLabel" destination="hC9-yQ-EAb" id="RSZ-G6-Q2L"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Hxk-au-NXb" id="jDG-fB-1eb"/>
-                            <outlet property="delegate" destination="Hxk-au-NXb" id="l8E-cY-ebV"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="My Recipes" id="Xl3-tk-dy5">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="5By-h3-Pw9"/>
-                    </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GjY-pU-F6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3823.188405797102" y="118.52678571428571"/>
-        </scene>
-        <!--Recipes-->
-        <scene sceneID="tQA-oV-8we">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2oF-b7-9ry" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recipes" image="book" catalog="system" id="QF9-2j-vAO"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xfX-S7-A3k">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Hxk-au-NXb" kind="relationship" relationship="rootViewController" id="T7p-M6-r4f"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mxT-de-avX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2913.04347826087" y="118.52678571428571"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="a5E-cq-jy3">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jhS-EY-q3M" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9gt-yW-wke">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="2oF-b7-9ry" kind="relationship" relationship="viewControllers" id="BPC-Tu-sw3"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v2V-0e-34O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2002.8985507246377" y="118.52678571428571"/>
-        </scene>
         <!--My Recipes-->
         <scene sceneID="38o-Vk-O9v">
             <objects>
@@ -129,7 +29,7 @@
                                                 <constraint firstAttribute="width" constant="70" id="Roc-rZ-Ii1"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-u5-bwb">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-u5-bwb">
                                             <rect key="frame" x="105" y="25.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -346,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEP-QT-ilq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6051" y="1311"/>
+            <point key="canvasLocation" x="5067" y="1552"/>
         </scene>
         <!--Fridge-->
         <scene sceneID="7M0-ZB-mEr">
@@ -376,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="71" id="s49-ly-mFl" customClass="TableViewCell" customModule="zest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="71" id="s49-ly-mFl" customClass="DiscoverCell" customModule="zest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s49-ly-mFl" id="4lf-k7-zic">
@@ -389,7 +289,7 @@
                                                 <constraint firstAttribute="width" constant="70" id="S8Z-hZ-msv"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-Ij-H07">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0vL-Ij-H07">
                                             <rect key="frame" x="105" y="25.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -405,8 +305,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="Ceq-m6-PE2" id="3S9-t7-yXZ"/>
-                                    <outlet property="recipeTitle" destination="0vL-Ij-H07" id="PxJ-nA-ctN"/>
+                                    <outlet property="resultImage" destination="Ceq-m6-PE2" id="X1j-52-10S"/>
+                                    <outlet property="resultTitle" destination="0vL-Ij-H07" id="Zym-9L-ZGP"/>
+                                    <segue destination="8dU-L2-1LV" kind="show" identifier="showResult" id="n7G-bZ-cKj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -447,4 +348,7 @@
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="square.split.2x1.fill" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="n7G-bZ-cKj"/>
+    </inferredMetricsTieBreakers>
 </document>

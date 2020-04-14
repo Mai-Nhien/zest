@@ -30,7 +30,7 @@ class RecipeModel {
             load()
         // Else if it doesn't initialize with default values
         } else{
-            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "tada"))
+            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste."))
         }
     }
     
