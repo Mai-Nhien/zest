@@ -19,14 +19,20 @@ class RecipeDetailViewController: UIViewController {
     var heading = ""
     var image = ""
     var details = ""
+    var data: Data?
     var recipeIndex: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeTitle.text = heading
         recipeDetails.text = details
-        let url = URL(string: image)
-        recipeImage.kf.setImage(with: url)
+        if image.count > 0 {
+            let url = URL(string: image)
+            recipeImage.kf.setImage(with: url)
+        }
+        if let imageData = data {
+            recipeImage.image = UIImage(data: imageData)
+        }
         
         if recipeIndex >= 0 {
             saveButton = UIBarButtonItem(title: "Save Recipe", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveRecipe))

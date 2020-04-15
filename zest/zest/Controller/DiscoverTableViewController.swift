@@ -49,8 +49,10 @@ class DiscoverTableViewController: UITableViewController {
         // Get the recipe object
         if RecipeModel.shared.recipeResults.count > 0 {
             let recipe = RecipeModel.shared.recipeResults[indexPath.row]
-            let url = URL(string: recipe.image)
-            cell.resultImage.kf.setImage(with: url)
+            if let image = recipe.image {
+                let url = URL(string: image)
+                cell.resultImage.kf.setImage(with: url)
+            }
             cell.resultTitle.text = recipe.title
         } else {
             cell.resultTitle.text = "No Recipes"
@@ -68,7 +70,9 @@ class DiscoverTableViewController: UITableViewController {
             if let selected = tableView.indexPathForSelectedRow?.row {
                 let recipe = RecipeModel.shared.recipeResults[selected]
                 recipeVC.heading = recipe.title
-                recipeVC.image = recipe.image
+                if let image = recipe.image {
+                    recipeVC.image = image
+                }
                 if let sourceRecipe = recipe.sourceUrl {
                     recipeVC.details = sourceRecipe
                 }

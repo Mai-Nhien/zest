@@ -40,8 +40,12 @@ class RecipeTableViewController: UITableViewController {
         // Get the recipe object
         if RecipeModel.shared.savedRecipes.count > 0 {
             let recipe = RecipeModel.shared.savedRecipes[indexPath.row]
-            let url = URL(string: recipe.image)
-            cell.recipeImage.kf.setImage(with: url)
+            if let data = recipe.imageData {
+                cell.recipeImage.image = UIImage(data: data)
+            } else if let image = recipe.image {
+                let url = URL(string: image)
+                cell.recipeImage.kf.setImage(with: url)
+            }
             cell.recipeTitle.text = recipe.title
         } else {
             cell.recipeTitle.text = "No Recipes"
@@ -68,10 +72,15 @@ class RecipeTableViewController: UITableViewController {
             if let selected = tableView.indexPathForSelectedRow?.row {
                 let recipe = RecipeModel.shared.savedRecipes[selected]
                 recipeVC.heading = recipe.title
-                recipeVC.image = recipe.image
+                if let image = recipe.image {
+                    recipeVC.image = image
+                }
                 if let check = recipe.isCustom, check == true {
                     if let recipeDetails = recipe.recipe {
                         recipeVC.details = recipeDetails
+                    }
+                    if let data = recipe.imageData {
+                        recipeVC.data = data
                     }
                 } else {
                     if let recipeUrl = recipe.sourceUrl {

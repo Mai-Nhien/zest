@@ -17,14 +17,24 @@ struct Result: Codable {
 
 struct Recipe: Equatable, Codable {
     var title: String
-    var image: String
+    var image: String?
     var sourceUrl: String?
     var recipe: String?
     var isCustom: Bool?
+    var imageData: Data?
     
-    init (title: String, image: String, recipe: String) {
+    init (title: String, image: String?, recipe: String, imageData: Data?) {
         self.title = title
-        self.image = image
+        if let image = image {
+            self.image = image
+        } else {
+            self.image = ""
+        }
+        if let imageData = imageData {
+            self.imageData = imageData
+        } else {
+            self.imageData = nil
+        }
         self.recipe = recipe
         self.sourceUrl = nil
         self.isCustom = true
