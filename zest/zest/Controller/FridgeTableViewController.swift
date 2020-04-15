@@ -28,7 +28,7 @@ class FridgeTableViewController: UITableViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             if let item = alertController.textFields?.first?.text {
-                RecipeModel.shared.fridge.append(item)
+                RecipeModel.shared.appendIngredient(ingredient: item)
                 self.tableView.reloadData()
             }
         }
@@ -67,7 +67,7 @@ class FridgeTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            RecipeModel.shared.fridge.remove(at: indexPath.row)
+            RecipeModel.shared.deleteIngredient(index: indexPath.row)
 //             Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         }

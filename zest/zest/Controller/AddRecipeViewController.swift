@@ -86,7 +86,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func savePressed(_ sender: Any) {
         if let title = titleTF.text, let recipe = recipeTV.text, let data = uploadImageView.image?.pngData() {
-            RecipeModel.shared.savedRecipes.append(Recipe(title: title, image: nil, recipe: recipe, imageData: data))
+            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: nil, recipe: recipe, imageData: data))
         }
         titleTF.text = ""
         recipeTV.text = ""

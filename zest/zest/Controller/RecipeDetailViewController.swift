@@ -43,7 +43,7 @@ class RecipeDetailViewController: UIViewController {
     }
     
     @objc func saveRecipe() {
-        RecipeModel.shared.savedRecipes.append(RecipeModel.shared.recipeResults[recipeIndex])
+        RecipeModel.shared.appendRecipe(recipe: RecipeModel.shared.recipeResults[recipeIndex])
     }
 }
 

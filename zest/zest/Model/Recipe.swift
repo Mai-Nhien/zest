@@ -8,6 +8,25 @@
 
 import Foundation
 
+struct AccountData: Codable {
+    let savedRecipes: [Recipe]
+    let fridgeIngredients: [String]
+    private enum CodingKeys: String, CodingKey {
+        case savedRecipes = "savedRecipes"
+        case fridgeIngredients = "fridgeIngredients"
+    }
+    
+    init (savedRecipes: [Recipe], fridgeIngredients: [String]) {
+        self.savedRecipes = savedRecipes
+        self.fridgeIngredients = fridgeIngredients
+    }
+    
+    init (from: Decodable, savedRecipes: [Recipe], fridgeIngredients: [String]) {
+        self.savedRecipes = savedRecipes
+        self.fridgeIngredients = fridgeIngredients
+    }
+}
+
 struct Result: Codable {
     let results: [Recipe]
     private enum CodingKeys: String, CodingKey {

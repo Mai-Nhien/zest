@@ -38,7 +38,9 @@ class RecipeModel {
         do {
             let data = try Data(contentsOf: fileLocation)
             let decoder = JSONDecoder()
-            savedRecipes = try decoder.decode([Recipe].self, from: data)
+            let accountData = try decoder.decode(AccountData.self, from: data)
+            savedRecipes = accountData.savedRecipes
+            fridge = accountData.fridgeIngredients
         } catch{
             print("err \(error)")
         }
@@ -47,7 +49,8 @@ class RecipeModel {
     private func save() {
         do{
             let encoder = JSONEncoder()
-            let data = try encoder.encode(savedRecipes)
+            let accountData = AccountData(savedRecipes: savedRecipes, fridgeIngredients: fridge)
+            let data = try encoder.encode(accountData)
             let jsonString = String(data: data, encoding: .utf8)!
             try jsonString.write(to: fileLocation, atomically: true, encoding: .utf8)
         } catch{
@@ -57,6 +60,26 @@ class RecipeModel {
     
     func getSavedRecipes() -> [Recipe] {
         return savedRecipes
+    }
+    
+    func appendRecipe(recipe: Recipe) {
+        savedRecipes.append(recipe)
+        save()
+    }
+    
+    func deleteRecipe(index: Int) {
+        savedRecipes.remove(at: index)
+        save()
+    }
+    
+    func appendIngredient(ingredient: String){
+        fridge.append(ingredient)
+        save()
+    }
+    
+    func deleteIngredient(index: Int) {
+        fridge.remove(at: index)
+        save()
     }
     
     func getNewRecipes(onSuccess: @escaping ([Recipe]) -> Void) {

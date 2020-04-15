@@ -57,7 +57,7 @@ class RecipeTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            RecipeModel.shared.savedRecipes.remove(at: indexPath.row)
+            RecipeModel.shared.deleteRecipe(index: indexPath.row)
 //             Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
