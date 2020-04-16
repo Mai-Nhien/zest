@@ -10,6 +10,7 @@
 		39792F992444F41800B96F25 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F982444F41800B96F25 /* DiscoverTableViewController.swift */; };
 		39792F9B244578D400B96F25 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9A244578D400B96F25 /* DiscoverCell.swift */; };
 		39792F9D24465A6D00B96F25 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */; };
+		39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9E2447D87100B96F25 /* GroceryViewController.swift */; };
 		3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F700243BC8820071FCC6 /* AppDelegate.swift */; };
 		3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F702243BC8820071FCC6 /* SceneDelegate.swift */; };
 		3996F708243BC8820071FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3996F706243BC8820071FCC6 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		39792F982444F41800B96F25 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		39792F9A244578D400B96F25 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		39792F9E2447D87100B96F25 /* GroceryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
 		3996F6FD243BC8820071FCC6 /* zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3996F700243BC8820071FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3996F702243BC8820071FCC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 		3996F730243BC8B30071FCC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39792F9A244578D400B96F25 /* DiscoverCell.swift */,
+				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
 				3996F733243C175C0071FCC6 /* RecipeModel.swift */,
 				3996F735243C176A0071FCC6 /* Recipe.swift */,
 			);
@@ -168,12 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */,
-				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
 				3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */,
 				3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */,
 				39792F982444F41800B96F25 /* DiscoverTableViewController.swift */,
-				39792F9A244578D400B96F25 /* DiscoverCell.swift */,
 				39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */,
+				39792F9E2447D87100B96F25 /* GroceryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */,
 				39792F992444F41800B96F25 /* DiscoverTableViewController.swift in Sources */,
 				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
+				39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */,
 				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
 				39792F9D24465A6D00B96F25 /* AddRecipeViewController.swift in Sources */,
 				3996F736243C176A0071FCC6 /* Recipe.swift in Sources */,

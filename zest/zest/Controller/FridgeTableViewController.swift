@@ -59,6 +59,7 @@ class FridgeTableViewController: UITableViewController {
         // Get the recipe object
         if RecipeModel.shared.fridge.count > 0 {
             cell.textLabel?.text = RecipeModel.shared.fridge[indexPath.row]
+            cell.textLabel?.font = UIFont(name:"Arial Rounded MT Bold", size:17)
         }
        
         return cell
