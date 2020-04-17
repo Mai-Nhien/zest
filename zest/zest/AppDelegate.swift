@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSPlacesClient.provideAPIKey("AIzaSyCyfC5LF58QGmrEToRJQ7oG-2bZei_d2u4")
+        
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor(red: 199/255.0, green: 126/255.0, blue: 97/255.0, alpha: 0.85)
+        navigationBarAppearace.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "Arial Rounded MT Bold", size: 17) ?? UIFont.systemFont(ofSize: 17)]
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Arial Rounded MT Bold", size: 17.0)!],
+        for: .normal)
         return true
     }
 
