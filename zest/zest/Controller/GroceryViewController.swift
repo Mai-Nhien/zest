@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 
 class GroceryViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager  = CLLocationManager()
@@ -27,14 +28,9 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
         // Request permission for user's location
         locationManager.requestWhenInUseAuthorization()
         
-        
-//        // Create the annoation for blue bottle // 34.0762717,-118.3723989
-//        let coordinate = CLLocationCoordinate2D(latitude: 34.0762717, longitude: -118.3723989)
-//        let blueBottle = Location(coordinate: coordinate)
-//        
-//        // Add the annotation to the map view
-//        mapView.addAnnotation(blueBottle)
-//        mapView.setCenter(coordinate, animated: false)
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
+        loadStores()
         
     }
     
@@ -45,7 +41,31 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.first!
-        print("location update lat: \(location.coordinate.latitude) long: \(location.coordinate.longitude)")
+        if let location = locations.last{
+            let startMarker = Location(coordinate: location.coordinate, name: "Start Point")
+            mapView.addAnnotation(startMarker)
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func loadStores() {
+        if let userCoordinate = locationManager.location?.coordinate {
+            GrocerySearchModel.shared.fetchNearbyGroceryStores(coordinate: userCoordinate, radius: 1000, onSuccess: {(storeArray) in
+                       GrocerySearchModel.shared.groceryStores = storeArray
+                       DispatchQueue.main.async {
+                        self.displayStores()
+                       }
+                   })
+        }
+    }
+    
+    func displayStores() {
+        let stores = GrocerySearchModel.shared.groceryStores
+        for store in stores {
+            let pin = Location(coordinate: CLLocationCoordinate2D(latitude: store.geometry.location.lat, longitude: store.geometry.location.lng), name: store.name)
+            mapView.addAnnotation(pin)
+        }
     }
 }

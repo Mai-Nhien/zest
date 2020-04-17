@@ -11,6 +11,8 @@
 		39792F9B244578D400B96F25 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9A244578D400B96F25 /* DiscoverCell.swift */; };
 		39792F9D24465A6D00B96F25 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */; };
 		39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792F9E2447D87100B96F25 /* GroceryViewController.swift */; };
+		39792FA12448CE6900B96F25 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792FA02448CE6800B96F25 /* Location.swift */; };
+		39792FA3244924A500B96F25 /* GrocerySearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39792FA2244924A400B96F25 /* GrocerySearchModel.swift */; };
 		3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F700243BC8820071FCC6 /* AppDelegate.swift */; };
 		3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F702243BC8820071FCC6 /* SceneDelegate.swift */; };
 		3996F708243BC8820071FCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3996F706243BC8820071FCC6 /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 		3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7422443C03B0071FCC6 /* TableViewCell.swift */; };
 		3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */; };
 		3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */; };
+		43C31D8FDB40C0B1E6D2F1BB /* Pods_zest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFE9C47E8986480A4263451 /* Pods_zest.framework */; };
+		B8D8746540599BBA01738202 /* Pods_zestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */; };
+		FA5B0FC04938534519B83BE6 /* Pods_zest_zestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F09B2BDD4596ADC0FC1AB0 /* Pods_zest_zestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,8 @@
 		39792F9A244578D400B96F25 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		39792F9E2447D87100B96F25 /* GroceryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
+		39792FA02448CE6800B96F25 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		39792FA2244924A400B96F25 /* GrocerySearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocerySearchModel.swift; sourceTree = "<group>"; };
 		3996F6FD243BC8820071FCC6 /* zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3996F700243BC8820071FCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3996F702243BC8820071FCC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +75,15 @@
 		3996F7422443C03B0071FCC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeTableViewController.swift; sourceTree = "<group>"; };
+		42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E2E8107207ECF0005E4025 /* Pods-zest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest.debug.xcconfig"; path = "Target Support Files/Pods-zest/Pods-zest.debug.xcconfig"; sourceTree = "<group>"; };
+		4FFE9C47E8986480A4263451 /* Pods_zest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879AC42F28DD52C57A1CD88D /* Pods-zestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zestTests.release.xcconfig"; path = "Target Support Files/Pods-zestTests/Pods-zestTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4F09B2BDD4596ADC0FC1AB0 /* Pods_zest_zestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zest_zestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFA412A5378FEADA50FCB6F /* Pods-zest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest.release.xcconfig"; path = "Target Support Files/Pods-zest/Pods-zest.release.xcconfig"; sourceTree = "<group>"; };
+		E7430F79CDA2C7904434F6EA /* Pods-zestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zestTests.debug.xcconfig"; path = "Target Support Files/Pods-zestTests/Pods-zestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8055AA5D4CECE30E136E6A1 /* Pods-zest-zestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest-zestUITests.release.xcconfig"; path = "Target Support Files/Pods-zest-zestUITests/Pods-zest-zestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE57A6F2CFD9ED184AEACCCC /* Pods-zest-zestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest-zestUITests.debug.xcconfig"; path = "Target Support Files/Pods-zest-zestUITests/Pods-zest-zestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3996F73D2443AF0E0071FCC6 /* Kingfisher in Frameworks */,
+				43C31D8FDB40C0B1E6D2F1BB /* Pods_zest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D8746540599BBA01738202 /* Pods_zestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5B0FC04938534519B83BE6 /* Pods_zest_zestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +122,8 @@
 				3996F716243BC8840071FCC6 /* zestTests */,
 				3996F721243BC8840071FCC6 /* zestUITests */,
 				3996F6FE243BC8820071FCC6 /* Products */,
+				E4A79932977862F5F9106191 /* Pods */,
+				F11FCB42FED667527306369C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +177,8 @@
 				3996F7422443C03B0071FCC6 /* TableViewCell.swift */,
 				3996F733243C175C0071FCC6 /* RecipeModel.swift */,
 				3996F735243C176A0071FCC6 /* Recipe.swift */,
+				39792FA02448CE6800B96F25 /* Location.swift */,
+				39792FA2244924A400B96F25 /* GrocerySearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +204,29 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E4A79932977862F5F9106191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45E2E8107207ECF0005E4025 /* Pods-zest.debug.xcconfig */,
+				CCFA412A5378FEADA50FCB6F /* Pods-zest.release.xcconfig */,
+				FE57A6F2CFD9ED184AEACCCC /* Pods-zest-zestUITests.debug.xcconfig */,
+				E8055AA5D4CECE30E136E6A1 /* Pods-zest-zestUITests.release.xcconfig */,
+				E7430F79CDA2C7904434F6EA /* Pods-zestTests.debug.xcconfig */,
+				879AC42F28DD52C57A1CD88D /* Pods-zestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F11FCB42FED667527306369C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE9C47E8986480A4263451 /* Pods_zest.framework */,
+				B4F09B2BDD4596ADC0FC1AB0 /* Pods_zest_zestUITests.framework */,
+				42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3996F727243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zest" */;
 			buildPhases = (
+				8616FD57E4E757008F1EF952 /* [CP] Check Pods Manifest.lock */,
 				3996F6F9243BC8820071FCC6 /* Sources */,
 				3996F6FA243BC8820071FCC6 /* Frameworks */,
 				3996F6FB243BC8820071FCC6 /* Resources */,
+				E3C59A2EAA9EE9C459656FBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3996F72A243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestTests" */;
 			buildPhases = (
+				A4021435D08D5F0BE17D874B /* [CP] Check Pods Manifest.lock */,
 				3996F70F243BC8840071FCC6 /* Sources */,
 				3996F710243BC8840071FCC6 /* Frameworks */,
 				3996F711243BC8840071FCC6 /* Resources */,
@@ -226,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3996F72D243BC8840071FCC6 /* Build configuration list for PBXNativeTarget "zestUITests" */;
 			buildPhases = (
+				3C99893A8D4ADE4840947A33 /* [CP] Check Pods Manifest.lock */,
 				3996F71A243BC8840071FCC6 /* Sources */,
 				3996F71B243BC8840071FCC6 /* Frameworks */,
 				3996F71C243BC8840071FCC6 /* Resources */,
+				4D73E99547C9E739C2874672 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,6 +364,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C99893A8D4ADE4840947A33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zest-zestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D73E99547C9E739C2874672 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zest-zestUITests/Pods-zest-zestUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zest-zestUITests/Pods-zest-zestUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zest-zestUITests/Pods-zest-zestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8616FD57E4E757008F1EF952 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4021435D08D5F0BE17D874B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C59A2EAA9EE9C459656FBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zest/Pods-zest-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zest/Pods-zest-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zest/Pods-zest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3996F6F9243BC8820071FCC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -321,9 +475,11 @@
 				3996F734243C175C0071FCC6 /* RecipeModel.swift in Sources */,
 				3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */,
 				3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */,
+				39792FA3244924A500B96F25 /* GrocerySearchModel.swift in Sources */,
 				3996F701243BC8820071FCC6 /* AppDelegate.swift in Sources */,
 				39792F9B244578D400B96F25 /* DiscoverCell.swift in Sources */,
 				3996F703243BC8820071FCC6 /* SceneDelegate.swift in Sources */,
+				39792FA12448CE6900B96F25 /* Location.swift in Sources */,
 				39792F992444F41800B96F25 /* DiscoverTableViewController.swift in Sources */,
 				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
 				39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */,
@@ -500,6 +656,7 @@
 		};
 		3996F728243BC8840071FCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E2E8107207ECF0005E4025 /* Pods-zest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +674,7 @@
 		};
 		3996F729243BC8840071FCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCFA412A5378FEADA50FCB6F /* Pods-zest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +692,7 @@
 		};
 		3996F72B243BC8840071FCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7430F79CDA2C7904434F6EA /* Pods-zestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -555,6 +714,7 @@
 		};
 		3996F72C243BC8840071FCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879AC42F28DD52C57A1CD88D /* Pods-zestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +736,7 @@
 		};
 		3996F72E243BC8840071FCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE57A6F2CFD9ED184AEACCCC /* Pods-zest-zestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +756,7 @@
 		};
 		3996F72F243BC8840071FCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8055AA5D4CECE30E136E6A1 /* Pods-zest-zestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
