@@ -29,12 +29,12 @@ struct Coordinates: Codable {
 }
 
 class Location: NSObject, MKAnnotation {
-    var name: String!
+    var title: String?
     var coordinate: CLLocationCoordinate2D
     
-    init(coordinate: CLLocationCoordinate2D, name: String) {
+    init(coordinate: CLLocationCoordinate2D, title: String) {
         self.coordinate = coordinate
-        self.name = name
+        self.title = title
     }
 
 }

@@ -42,7 +42,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
-            let startMarker = Location(coordinate: location.coordinate, name: "Start Point")
+            let startMarker = Location(coordinate: location.coordinate, title: "Start Point")
             mapView.addAnnotation(startMarker)
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
@@ -55,7 +55,12 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
             GrocerySearchModel.shared.fetchNearbyGroceryStores(coordinate: userCoordinate, radius: 1000, onSuccess: {(storeArray) in
                        GrocerySearchModel.shared.groceryStores = storeArray
                        DispatchQueue.main.async {
-                        self.displayStores()
+                        //self.displayStores()
+                            let stores = GrocerySearchModel.shared.groceryStores
+                            for store in stores {
+                                let pin = Location(coordinate: CLLocationCoordinate2D(latitude: store.geometry.location.lat, longitude: store.geometry.location.lng), title: store.name)
+                                self.mapView.addAnnotation(pin)
+                            }
                        }
                    })
         }
@@ -64,7 +69,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
     func displayStores() {
         let stores = GrocerySearchModel.shared.groceryStores
         for store in stores {
-            let pin = Location(coordinate: CLLocationCoordinate2D(latitude: store.geometry.location.lat, longitude: store.geometry.location.lng), name: store.name)
+            let pin = Location(coordinate: CLLocationCoordinate2D(latitude: store.geometry.location.lat, longitude: store.geometry.location.lng), title: store.name)
             mapView.addAnnotation(pin)
         }
     }
