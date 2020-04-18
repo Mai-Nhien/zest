@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="4144.927536231884" y="823.66071428571422"/>
         </scene>
-        <!--Groceries-->
+        <!--Nearby Grocery Stores-->
         <scene sceneID="Yfx-wo-hna">
             <objects>
                 <viewController id="WIc-hW-QwN" customClass="GroceryViewController" customModule="zest" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oom-Y1-Tyc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,14 +210,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7RQ-kV-p6w"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Groceries" image="cart" catalog="system" id="Bs5-Me-7qF"/>
+                    <navigationItem key="navigationItem" title="Nearby Grocery Stores" id="ixD-JK-L8D"/>
                     <connections>
                         <outlet property="mapView" destination="oom-Y1-Tyc" id="3JS-M3-b22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgx-ys-iGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3770" y="90"/>
+            <point key="canvasLocation" x="4578" y="17"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BlX-WX-faS">
@@ -234,7 +234,7 @@
                         <segue destination="2A0-gH-5jS" kind="relationship" relationship="viewControllers" id="Sjf-lw-VLA"/>
                         <segue destination="ijF-vh-dCl" kind="relationship" relationship="viewControllers" id="7sK-of-cr9"/>
                         <segue destination="Uba-6v-T51" kind="relationship" relationship="viewControllers" id="gM6-21-stP"/>
-                        <segue destination="WIc-hW-QwN" kind="relationship" relationship="viewControllers" id="q8m-ig-riL"/>
+                        <segue destination="SiG-Ya-dPi" kind="relationship" relationship="viewControllers" id="hR5-1G-g8F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLr-gi-3Ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -459,6 +459,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA3-Ha-Okm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3343" y="1552"/>
+        </scene>
+        <!--Groceries-->
+        <scene sceneID="C6l-HW-Mbx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SiG-Ya-dPi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groceries" image="cart" catalog="system" id="Bs5-Me-7qF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ort-hh-drT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WIc-hW-QwN" kind="relationship" relationship="rootViewController" id="VRQ-r5-0E1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkM-6Z-ODi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3742" y="17"/>
         </scene>
     </scenes>
     <resources>
