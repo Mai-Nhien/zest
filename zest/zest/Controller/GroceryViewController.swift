@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class GroceryViewController: UIViewController, CLLocationManagerDelegate {
+class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let locationManager  = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
@@ -20,7 +20,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 0.0
@@ -32,6 +32,11 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showsUserLocation = true
         loadStores()
         
+    }
+    
+    
+    @IBAction func refreshLocations(_ sender: UIBarButtonItem) {
+        loadStores()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -47,6 +52,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate {
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             mapView.setRegion(region, animated: true)
+            loadStores()
         }
     }
     

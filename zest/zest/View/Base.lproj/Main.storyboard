@@ -210,7 +210,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7RQ-kV-p6w"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Nearby Grocery Stores" id="ixD-JK-L8D"/>
+                    <navigationItem key="navigationItem" title="Nearby Grocery Stores" id="ixD-JK-L8D">
+                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" id="x7n-mQ-2OE">
+                            <connections>
+                                <action selector="refreshLocations:" destination="WIc-hW-QwN" id="CQ6-zP-ION"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="oom-Y1-Tyc" id="3JS-M3-b22"/>
                     </connections>
@@ -481,6 +487,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="book" catalog="system" width="64" height="50"/>
         <image name="cart" catalog="system" width="64" height="50"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>

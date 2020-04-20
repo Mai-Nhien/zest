@@ -46,6 +46,8 @@ class GrocerySearchModel {
                         print("OH NO")
                         exit(1)
                     }
+                } else {
+                    print("NO DATA??")
                 }
             }.resume()
         }
