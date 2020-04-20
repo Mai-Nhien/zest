@@ -43,6 +43,7 @@ class GrocerySearchModel {
                         placeResults = results.results
                         onSuccess(placeResults)
                     } catch {
+                        print("OH NO")
                         exit(1)
                     }
                 }
