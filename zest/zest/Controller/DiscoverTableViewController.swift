@@ -32,7 +32,12 @@ class DiscoverTableViewController: UITableViewController {
             }
         })
     }
-
+    
+    
+    @IBAction func refreshSearch(_ sender: UIBarButtonItem) {
+        loadResults()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
