@@ -40,9 +40,9 @@ struct Recipe: Equatable, Codable {
     var sourceUrl: String?
     var recipe: String?
     var isCustom: Bool?
-    var imageData: Data?
+    var imageData: String?
     
-    init (title: String, image: String?, recipe: String, imageData: Data?) {
+    init (title: String, image: String?, recipe: String, imageData: String?) {
         self.title = title
         if let image = image {
             self.image = image

@@ -22,16 +22,21 @@ class RecipeModel {
         savedRecipes = []
         recipeResults = []
         fridge = ["eggs", "flour", "sugar"]
+//        if let user = Auth.auth().currentUser {
+//            if let ingredients = RecipeModelService().getFridge(uid: user.uid) {
+//               fridge = ingredients
+//            }
+//        }
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         fileLocation = documentsDirectory.appendingPathComponent("recipes.json")
         // Does the file exist? If it does, load it!
-//        if FileManager.default.fileExists(atPath: fileLocation.path){
-//            load()
-//        // Else if it doesn't initialize with default values
-//        } else{
-//            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste.", imageData: nil))
-//        }
+        if FileManager.default.fileExists(atPath: fileLocation.path){
+            load()
+        // Else if it doesn't initialize with default values
+        } else{
+            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste.", imageData: nil))
+        }
         
         
     }
@@ -42,7 +47,7 @@ class RecipeModel {
             let decoder = JSONDecoder()
             let accountData = try decoder.decode(AccountData.self, from: data)
             savedRecipes = accountData.savedRecipes
-            fridge = accountData.fridgeIngredients
+            //fridge = accountData.fridgeIngredients
         } catch{
             print("err \(error)")
         }

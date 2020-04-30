@@ -20,7 +20,8 @@ class SignInUpViewController: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         if let email = emailTF.text, email.trimmingCharacters(in: .whitespacesAndNewlines) != "", let password = passwordTF.text, password.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
-                if error == nil {
+                if error == nil, let result = result {
+                    RecipeModelService().loadFridge(uid: result.user.uid)
                     self.goToHome()
                 }
             }
@@ -34,8 +35,9 @@ class SignInUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                 if error == nil, let result = result {
                     let db = Firestore.firestore()
-                    db.collection("users").document(result.user.uid).setData(["fridgeIngredients" : ["eggs"], "savedRecipes": ["title": "Pasta", "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg", "recipe" : "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste."]])
+                    db.collection("users").document(result.user.uid).setData(["fridgeIngredients" : ["eggs"], "savedRecipes": [["title": "Pasta", "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg", "recipe": "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste."]]])
                     self.goToHome()
+                } else {
                 }
             }
         } else {
