@@ -57,6 +57,9 @@ class RecipeModel {
         do{
             let encoder = JSONEncoder()
             let accountData = AccountData(savedRecipes: savedRecipes, fridgeIngredients: fridge)
+            if let user = Auth.auth().currentUser {
+                RecipeModelService().save(uid: user.uid, accountData: accountData)
+            }
             let data = try encoder.encode(accountData)
             let jsonString = String(data: data, encoding: .utf8)!
             try jsonString.write(to: fileLocation, atomically: true, encoding: .utf8)

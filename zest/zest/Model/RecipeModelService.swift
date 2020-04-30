@@ -35,4 +35,12 @@ class RecipeModelService {
             }
         }
     }
+    
+    func save(uid: String, accountData: AccountData) {
+        do {
+            try db.collection("users").document(uid).setData(from: accountData)
+        } catch let error {
+            print("Error writing to Firestore: \(error)")
+        }
+    }
 }
