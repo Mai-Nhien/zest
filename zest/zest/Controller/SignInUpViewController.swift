@@ -22,6 +22,7 @@ class SignInUpViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if error == nil, let result = result {
                     RecipeModelService().loadFridge(uid: result.user.uid)
+                    RecipeModelService().loadSavedRecipes(uid: result.user.uid)
                     self.goToHome()
                 }
             }

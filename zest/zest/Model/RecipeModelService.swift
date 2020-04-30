@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class RecipeModelService {
     let db = Firestore.firestore()
@@ -24,6 +25,14 @@ class RecipeModelService {
     }
     
     func loadSavedRecipes(uid: String) {
-        
+        let docRef = db.collection("users").document(uid)
+        docRef.getDocument { (document, error) in
+            if let document = document {
+                let result = try? document.data(as: AccountData.self)
+                if let recipes = result?.savedRecipes {
+                    RecipeModel.shared.savedRecipes = recipes
+                }
+            }
+        }
     }
 }

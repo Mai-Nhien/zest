@@ -22,6 +22,7 @@ class RecipeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source

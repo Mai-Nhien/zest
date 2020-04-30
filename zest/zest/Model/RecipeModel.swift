@@ -46,7 +46,7 @@ class RecipeModel {
             let data = try Data(contentsOf: fileLocation)
             let decoder = JSONDecoder()
             let accountData = try decoder.decode(AccountData.self, from: data)
-            savedRecipes = accountData.savedRecipes
+            //savedRecipes = accountData.savedRecipes
             //fridge = accountData.fridgeIngredients
         } catch{
             print("err \(error)")
