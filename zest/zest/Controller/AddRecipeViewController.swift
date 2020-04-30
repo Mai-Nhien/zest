@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseStorage
+import FirebaseAuth
 
 class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     
@@ -85,8 +87,19 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        if let title = titleTF.text, let recipe = recipeTV.text, let data = uploadImageView.image?.pngData() {
-            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: nil, recipe: recipe, imageData: data.base64EncodedString(options: .endLineWithLineFeed)))
+        if let title = titleTF.text, let recipe = recipeTV.text, let data = uploadImageView.image?.pngData(), let user = Auth.auth().currentUser {
+            let storageRef = Storage.storage().reference().child("\(user.uid)").child("\(UUID().uuidString).png")
+            storageRef.putData(data, metadata: nil, completion: { (metadata, error) in
+                if error == nil, metadata != nil {
+                    storageRef.downloadURL{ (url, error) in
+                        if let url = url {
+                            print(url.absoluteString)
+                            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: nil, recipe: recipe, imageData: url.absoluteString))
+                        }
+                    }
+                    
+                }
+            })
         }
         titleTF.text = ""
         recipeTV.text = ""

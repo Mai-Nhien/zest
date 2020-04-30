@@ -31,9 +31,11 @@ class RecipeDetailViewController: UIViewController {
             recipeImage.kf.setImage(with: url)
         }
         if let imageString = data {
-            if let imageData = Data(base64Encoded: imageString, options: .ignoreUnknownCharacters){
-                recipeImage.image = UIImage(data: imageData)
-            }
+            let url = URL(string: imageString)
+            recipeImage.kf.setImage(with: url)
+//            if let imageData = Data(base64Encoded: imageString, options: .ignoreUnknownCharacters){
+//                recipeImage.image = UIImage(data: imageData)
+//            }
         }
         
         if recipeIndex >= 0 {

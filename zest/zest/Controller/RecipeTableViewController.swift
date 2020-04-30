@@ -42,9 +42,11 @@ class RecipeTableViewController: UITableViewController {
         if RecipeModel.shared.savedRecipes.count > 0 {
             let recipe = RecipeModel.shared.savedRecipes[indexPath.row]
             if let data = recipe.imageData {
-                if let imageData = Data(base64Encoded: data, options: .ignoreUnknownCharacters){
-                    cell.recipeImage.image = UIImage(data: imageData)
-                }
+                let url = URL(string: data)
+                cell.recipeImage.kf.setImage(with: url)
+//                if let imageData = Data(base64Encoded: data, options: .ignoreUnknownCharacters){
+//                    cell.recipeImage.image = UIImage(data: imageData)
+//                }
             } else if let image = recipe.image {
                 let url = URL(string: image)
                 cell.recipeImage.kf.setImage(with: url)
