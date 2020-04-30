@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class RecipeModel {
     static let shared = RecipeModel()
@@ -24,14 +25,15 @@ class RecipeModel {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
         fileLocation = documentsDirectory.appendingPathComponent("recipes.json")
-                
         // Does the file exist? If it does, load it!
-        if FileManager.default.fileExists(atPath: fileLocation.path){
-            load()
-        // Else if it doesn't initialize with default values
-        } else{
-            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste.", imageData: nil))
-        }
+//        if FileManager.default.fileExists(atPath: fileLocation.path){
+//            load()
+//        // Else if it doesn't initialize with default values
+//        } else{
+//            savedRecipes.append(Recipe(title: "Pasta", image: "https://spoonacular.com/recipeImages/716429-556x370.jpg", recipe: "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste.", imageData: nil))
+//        }
+        
+        
     }
     
     private func load() {

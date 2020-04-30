@@ -8,7 +8,7 @@ target 'zest' do
   # Pods for zest
 	pod 'GooglePlaces'
 	pod 'Firebase/Core'
-	pod 'Firebase/Database'
+	pod 'Firebase/Firestore'
 	pod 'Firebase/Auth'
 
   target 'zestTests' do

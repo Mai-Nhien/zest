@@ -28,6 +28,8 @@
 		3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */; };
 		3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */; };
 		399EB50B2450BC6C00B2297C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 399EB50A2450BC6C00B2297C /* GoogleService-Info.plist */; };
+		399EB50D2459F6E400B2297C /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399EB50C2459F6E400B2297C /* SignInUpViewController.swift */; };
+		399EB50F245A585C00B2297C /* RecipeModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399EB50E245A585C00B2297C /* RecipeModelService.swift */; };
 		43C31D8FDB40C0B1E6D2F1BB /* Pods_zest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFE9C47E8986480A4263451 /* Pods_zest.framework */; };
 		B8D8746540599BBA01738202 /* Pods_zestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */; };
 		FA5B0FC04938534519B83BE6 /* Pods_zest_zestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F09B2BDD4596ADC0FC1AB0 /* Pods_zest_zestUITests.framework */; };
@@ -77,6 +79,8 @@
 		3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeTableViewController.swift; sourceTree = "<group>"; };
 		399EB50A2450BC6C00B2297C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		399EB50C2459F6E400B2297C /* SignInUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
+		399EB50E245A585C00B2297C /* RecipeModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelService.swift; sourceTree = "<group>"; };
 		42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E2E8107207ECF0005E4025 /* Pods-zest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest.debug.xcconfig"; path = "Target Support Files/Pods-zest/Pods-zest.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFE9C47E8986480A4263451 /* Pods_zest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +186,7 @@
 				3996F735243C176A0071FCC6 /* Recipe.swift */,
 				39792FA02448CE6800B96F25 /* Location.swift */,
 				39792FA2244924A400B96F25 /* GrocerySearchModel.swift */,
+				399EB50E245A585C00B2297C /* RecipeModelService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				39792F982444F41800B96F25 /* DiscoverTableViewController.swift */,
 				39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */,
 				39792F9E2447D87100B96F25 /* GroceryViewController.swift */,
+				399EB50C2459F6E400B2297C /* SignInUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +530,8 @@
 				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
 				39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */,
 				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
+				399EB50D2459F6E400B2297C /* SignInUpViewController.swift in Sources */,
+				399EB50F245A585C00B2297C /* RecipeModelService.swift in Sources */,
 				39792F9D24465A6D00B96F25 /* AddRecipeViewController.swift in Sources */,
 				3996F736243C176A0071FCC6 /* Recipe.swift in Sources */,
 			);
