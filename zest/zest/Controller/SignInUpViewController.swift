@@ -37,6 +37,8 @@ class SignInUpViewController: UIViewController {
                 if error == nil, let result = result {
                     let db = Firestore.firestore()
                     db.collection("users").document(result.user.uid).setData(["fridgeIngredients" : ["eggs"], "savedRecipes": [["title": "Pasta", "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg", "recipe": "Boil pasta for 9 minutes. Pick your favorite pasta sauce and saute noodles and sauce in a pan. Add garlic, salt, pepper to taste."]]])
+                    RecipeModelService().loadFridge(uid: result.user.uid)
+                    RecipeModelService().loadSavedRecipes(uid: result.user.uid)
                     self.goToHome()
                 } else {
                 }

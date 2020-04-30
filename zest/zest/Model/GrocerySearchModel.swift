@@ -9,16 +9,6 @@
 import Foundation
 import CoreLocation
 
-extension Data {
-    var prettyPrintedJSONString: NSString? { /// NSString gives us a nice sanitized debugDescription
-        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
-              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
-              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
-
-        return prettyPrintedString
-    }
-}
-
 class GrocerySearchModel {
     var groceryStores: [PlaceData]
     let API_KEY = "AIzaSyCyfC5LF58QGmrEToRJQ7oG-2bZei_d2u4"
@@ -37,17 +27,15 @@ class GrocerySearchModel {
             URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                 if let data = data {
                     do {
-                        print(data.prettyPrintedJSONString)
                         var placeResults: [PlaceData] = []
                         let results = try JSONDecoder().decode(PlaceResult.self, from: data)
                         placeResults = results.results
                         onSuccess(placeResults)
                     } catch {
-                        print("OH NO")
                         exit(1)
                     }
                 } else {
-                    print("NO DATA??")
+                    onSuccess([])
                 }
             }.resume()
         }

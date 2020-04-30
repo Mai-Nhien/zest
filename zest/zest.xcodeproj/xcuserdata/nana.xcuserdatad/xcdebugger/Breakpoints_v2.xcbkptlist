@@ -30,9 +30,9 @@
             filePath = "zest/Model/RecipeModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "save()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getNewRecipes(onSuccess:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,10 +46,8 @@
             filePath = "zest/Model/RecipeModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "appendRecipe(recipe:)"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,10 +60,10 @@
             filePath = "zest/Model/RecipeModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "RecipeModel"
-            landmarkType = "3">
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getNewRecipes(onSuccess:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -113,22 +111,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "30D269E7-BD6B-4E07-966C-85D4B6DE72FC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zest/Model/RecipeModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -44,9 +44,6 @@ class RecipeTableViewController: UITableViewController {
             if let data = recipe.imageData {
                 let url = URL(string: data)
                 cell.recipeImage.kf.setImage(with: url)
-//                if let imageData = Data(base64Encoded: data, options: .ignoreUnknownCharacters){
-//                    cell.recipeImage.image = UIImage(data: imageData)
-//                }
             } else if let image = recipe.image {
                 let url = URL(string: image)
                 cell.recipeImage.kf.setImage(with: url)
