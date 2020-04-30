@@ -94,7 +94,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
                     storageRef.downloadURL{ (url, error) in
                         if let url = url {
                             print(url.absoluteString)
-                            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: nil, recipe: recipe, imageData: url.absoluteString))
+                            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: url.absoluteString, recipe: recipe))
                         }
                     }
                     

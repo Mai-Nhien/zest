@@ -19,7 +19,6 @@ class RecipeDetailViewController: UIViewController {
     var heading = ""
     var image = ""
     var details = ""
-    var data: String?
     var recipeIndex: Int = -1
     
     override func viewDidLoad() {
@@ -28,10 +27,6 @@ class RecipeDetailViewController: UIViewController {
         recipeDetails.text = details
         if image.count > 0 {
             let url = URL(string: image)
-            recipeImage.kf.setImage(with: url)
-        }
-        if let imageString = data {
-            let url = URL(string: imageString)
             recipeImage.kf.setImage(with: url)
         }
         
