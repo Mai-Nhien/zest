@@ -32,6 +32,11 @@ class RecipeTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "AddCustom"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         tableView.reloadData()
     }
 

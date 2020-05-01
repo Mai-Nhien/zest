@@ -95,6 +95,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
                         if let url = url {
                             print(url.absoluteString)
                             RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: url.absoluteString, recipe: recipe))
+                            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "AddCustom")))
                         }
                     }
                     
