@@ -22,6 +22,16 @@ class RecipeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "Fridge"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "SavedRecipes"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         tableView.reloadData()
     }
 

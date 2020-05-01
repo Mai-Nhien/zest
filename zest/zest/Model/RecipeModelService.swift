@@ -19,6 +19,7 @@ class RecipeModelService {
            if let document = document {
                 if let fridge = document.data()?["fridgeIngredients"] as? [String] {
                     RecipeModel.shared.fridge = fridge
+                    NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "Fridge")))
                 }
             }
         }
@@ -31,6 +32,7 @@ class RecipeModelService {
                 let result = try? document.data(as: AccountData.self)
                 if let recipes = result?.savedRecipes {
                     RecipeModel.shared.savedRecipes = recipes
+                    NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "SavedRecipes")))
                 }
             }
         }
