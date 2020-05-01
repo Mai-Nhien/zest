@@ -24,10 +24,12 @@ class SignInUpViewController: UIViewController {
                     RecipeModelService().loadFridge(uid: result.user.uid)
                     RecipeModelService().loadSavedRecipes(uid: result.user.uid)
                     self.goToHome()
+                } else {
+                    self.errorAlert(message: "Please check your credentials and try again.")
                 }
             }
         } else {
-           
+           errorAlert(message: "Please check to make sure you entered an email and a password.")
         }
     }
     
@@ -41,11 +43,21 @@ class SignInUpViewController: UIViewController {
                     RecipeModelService().loadSavedRecipes(uid: result.user.uid)
                     self.goToHome()
                 } else {
+                    self.errorAlert(message: "Please choose a password over 6 characters.")
                 }
             }
         } else {
-           
+            errorAlert(message: "Please check to make sure you entered an email and a password.")
         }
+    }
+    
+    func errorAlert(message: String) {
+        let alertController = UIAlertController(title: "Oops! Something went wrong.",
+            message: message,
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func goToHome() {
