@@ -13,6 +13,7 @@ import FirebaseFirestoreSwift
 class RecipeModelService {
     let db = Firestore.firestore()
 
+    // load fridge data from firestore
     func loadFridge(uid: String) {
         let docRef = db.collection("users").document(uid)
         docRef.getDocument { (document, error) in
@@ -25,6 +26,7 @@ class RecipeModelService {
         }
     }
     
+    // load recipe data from firestore
     func loadSavedRecipes(uid: String) {
         let docRef = db.collection("users").document(uid)
         docRef.getDocument { (document, error) in
@@ -38,6 +40,7 @@ class RecipeModelService {
         }
     }
     
+    // save fridge and recipes to firestore
     func save(uid: String, accountData: AccountData) {
         do {
             try db.collection("users").document(uid).setData(from: accountData)

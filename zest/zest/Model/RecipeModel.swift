@@ -23,6 +23,7 @@ class RecipeModel {
         fridge = ["eggs"]
     }
     
+    // save account data to Firebase Cloudstore
     private func save() {
         let accountData = AccountData(savedRecipes: savedRecipes, fridgeIngredients: fridge)
         if let user = Auth.auth().currentUser {
@@ -54,6 +55,7 @@ class RecipeModel {
         save()
     }
     
+    // Call spoonacular api 
     func getNewRecipes(onSuccess: @escaping ([Recipe]) -> Void) {
         let recipeList = fridge.joined(separator: ",")
         if let url = URL(string: "\(BASE_URL)recipes/complexSearch?includeIngredients=\(recipeList)&addRecipeInformation=true&apiKey=\(ACCESS_KEY)") {

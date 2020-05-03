@@ -17,7 +17,8 @@ class FridgeTableViewController: UITableViewController {
         self.tableView.rowHeight = 100.0
         tableView.reloadData()
     }
-        
+    
+    // Display alert to add ingredients
     @IBAction func addIngredient(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "Add to Fridge",
             message: "Add an ingredient to your search",

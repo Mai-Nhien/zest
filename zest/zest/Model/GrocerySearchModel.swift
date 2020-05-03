@@ -18,6 +18,7 @@ class GrocerySearchModel {
         groceryStores = []
     }
     
+    // call Google Places API to get nearby grocery stores
     func fetchNearbyGroceryStores(coordinate: CLLocationCoordinate2D, radius: Double, onSuccess: @escaping ([PlaceData]) -> Void) {
         var urlString = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(coordinate.latitude),\(coordinate.longitude)&radius=\(radius)&types=grocery_or_supermarket|supermarket&key=\(API_KEY)"
         urlString = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? urlString

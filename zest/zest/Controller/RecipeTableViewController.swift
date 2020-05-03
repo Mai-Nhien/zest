@@ -22,6 +22,8 @@ class RecipeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        // if the model has changed, refresh the table
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "Fridge"), object: nil, queue: nil) { (_) in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -99,8 +101,6 @@ class RecipeTableViewController: UITableViewController {
                 }
                 recipeVC.recipeIndex = -1
             }
-        } else if segue.identifier == "showAdd" {
-            
         }
     }
 

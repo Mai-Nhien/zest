@@ -30,6 +30,7 @@ class RecipeDetailViewController: UIViewController {
             recipeImage.kf.setImage(with: url)
         }
         
+        // If displaying a recipe result, show save button so user can save to personal recipes
         if recipeIndex >= 0 {
             saveButton = UIBarButtonItem(title: "Save Recipe", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveRecipe))
             navigationItem.rightBarButtonItem = saveButton
