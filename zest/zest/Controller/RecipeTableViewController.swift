@@ -22,6 +22,24 @@ class RecipeTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        // if the model has changed, refresh the table
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "Fridge"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "SavedRecipes"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: "AddCustom"), object: nil, queue: nil) { (_) in
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -40,9 +58,7 @@ class RecipeTableViewController: UITableViewController {
         // Get the recipe object
         if RecipeModel.shared.savedRecipes.count > 0 {
             let recipe = RecipeModel.shared.savedRecipes[indexPath.row]
-            if let data = recipe.imageData {
-                cell.recipeImage.image = UIImage(data: data)
-            } else if let image = recipe.image {
+            if let image = recipe.image {
                 let url = URL(string: image)
                 cell.recipeImage.kf.setImage(with: url)
             }
@@ -75,13 +91,9 @@ class RecipeTableViewController: UITableViewController {
                 if let image = recipe.image {
                     recipeVC.image = image
                 }
-                if let check = recipe.isCustom, check == true {
-                    if let recipeDetails = recipe.recipe {
-                        recipeVC.details = recipeDetails
-                    }
-                    if let data = recipe.imageData {
-                        recipeVC.data = data
-                    }
+                // if custom then display recipe, else display recipe URL
+                if let check = recipe.isCustom, check == true, let recipeDetails = recipe.recipe {
+                    recipeVC.details = recipeDetails
                 } else {
                     if let recipeUrl = recipe.sourceUrl {
                         recipeVC.details = recipeUrl
@@ -89,8 +101,6 @@ class RecipeTableViewController: UITableViewController {
                 }
                 recipeVC.recipeIndex = -1
             }
-        } else if segue.identifier == "showAdd" {
-            
         }
     }
 

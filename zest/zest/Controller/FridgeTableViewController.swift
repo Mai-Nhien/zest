@@ -17,7 +17,8 @@ class FridgeTableViewController: UITableViewController {
         self.tableView.rowHeight = 100.0
         tableView.reloadData()
     }
-        
+    
+    // Display alert to add ingredients
     @IBAction func addIngredient(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "Add to Fridge",
             message: "Add an ingredient to your search",
@@ -73,12 +74,6 @@ class FridgeTableViewController: UITableViewController {
 //             Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-
     }
 
 }

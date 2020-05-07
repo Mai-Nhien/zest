@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M9y-eP-K6f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25m-sF-CoT">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -226,10 +226,105 @@
             </objects>
             <point key="canvasLocation" x="4578" y="17"/>
         </scene>
+        <!--Sign In Up View Controller-->
+        <scene sceneID="k6f-qK-uqy">
+            <objects>
+                <viewController id="25m-sF-CoT" customClass="SignInUpViewController" customModule="zest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpY-Pz-JPX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78d-K4-upl">
+                                <rect key="frame" x="20" y="64" width="270.66666666666669" height="283"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="36"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.30588235289999999" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-sT-yma">
+                                <rect key="frame" x="20" y="367" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YMY-ac-xrX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-Ub-NPg">
+                                <rect key="frame" x="20" y="431" width="374" height="44"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO8-2N-f4z">
+                                <rect key="frame" x="80" y="495" width="47" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D4w-DP-f4H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.78039215689999997" green="0.4941176471" blue="0.3803921569" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="25m-sF-CoT" eventType="touchUpInside" id="bbZ-98-6KP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmD-EE-xMF">
+                                <rect key="frame" x="275.66666666666669" y="495" width="70" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="II2-4d-oF2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.78039215689999997" green="0.4941176471" blue="0.3803921569" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="25m-sF-CoT" eventType="touchUpInside" id="LdV-sJ-b1Q"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2cD-gi-Y8h">
+                                <rect key="frame" x="198.66666666666663" y="145.66666666666666" width="120" height="119.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="d9x-FL-kMa"/>
+                                    <constraint firstAttribute="width" constant="120" id="t03-xA-0y0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tpK-sT-yma" firstAttribute="top" secondItem="78d-K4-upl" secondAttribute="bottom" constant="20" id="6TF-eg-7Hl"/>
+                            <constraint firstItem="2cD-gi-Y8h" firstAttribute="centerY" secondItem="78d-K4-upl" secondAttribute="centerY" id="76y-TV-vOb"/>
+                            <constraint firstItem="dmD-EE-xMF" firstAttribute="centerX" secondItem="h5O-Ub-NPg" secondAttribute="centerX" multiplier="1.5" id="9Zi-tI-PZm"/>
+                            <constraint firstItem="tpK-sT-yma" firstAttribute="leading" secondItem="cYc-ef-wMJ" secondAttribute="leading" constant="20" id="9wS-mB-rnI"/>
+                            <constraint firstItem="tpK-sT-yma" firstAttribute="height" secondItem="h5O-Ub-NPg" secondAttribute="height" id="9z6-l2-AWr"/>
+                            <constraint firstItem="FO8-2N-f4z" firstAttribute="top" secondItem="h5O-Ub-NPg" secondAttribute="bottom" constant="20" id="EEg-XI-a51"/>
+                            <constraint firstItem="78d-K4-upl" firstAttribute="leading" secondItem="cYc-ef-wMJ" secondAttribute="leading" constant="20" id="JcX-0R-cT4"/>
+                            <constraint firstItem="2cD-gi-Y8h" firstAttribute="centerX" secondItem="cYc-ef-wMJ" secondAttribute="centerX" multiplier="1.25" id="PXj-Y4-4yd"/>
+                            <constraint firstItem="cYc-ef-wMJ" firstAttribute="trailing" secondItem="h5O-Ub-NPg" secondAttribute="trailing" constant="20" id="Sm4-Ez-roV"/>
+                            <constraint firstItem="78d-K4-upl" firstAttribute="top" secondItem="cYc-ef-wMJ" secondAttribute="top" constant="20" id="Uva-NF-Blg"/>
+                            <constraint firstItem="h5O-Ub-NPg" firstAttribute="centerY" secondItem="cYc-ef-wMJ" secondAttribute="centerY" id="bxX-4b-T25"/>
+                            <constraint firstItem="h5O-Ub-NPg" firstAttribute="top" secondItem="tpK-sT-yma" secondAttribute="bottom" constant="20" id="bym-ZZ-cVS"/>
+                            <constraint firstItem="tpK-sT-yma" firstAttribute="width" secondItem="h5O-Ub-NPg" secondAttribute="width" id="fh4-xR-IKd"/>
+                            <constraint firstItem="FO8-2N-f4z" firstAttribute="centerX" secondItem="h5O-Ub-NPg" secondAttribute="centerX" multiplier="0.5" id="keU-1K-BHc"/>
+                            <constraint firstItem="h5O-Ub-NPg" firstAttribute="leading" secondItem="cYc-ef-wMJ" secondAttribute="leading" constant="20" id="v5j-oh-3B0"/>
+                            <constraint firstItem="FO8-2N-f4z" firstAttribute="centerY" secondItem="dmD-EE-xMF" secondAttribute="centerY" id="vQy-u7-ids"/>
+                            <constraint firstItem="cYc-ef-wMJ" firstAttribute="trailing" secondItem="tpK-sT-yma" secondAttribute="trailing" constant="20" id="wsO-CC-KY6"/>
+                            <constraint firstItem="78d-K4-upl" firstAttribute="centerX" secondItem="cYc-ef-wMJ" secondAttribute="centerX" multiplier="0.75" id="xCV-s3-wr5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cYc-ef-wMJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTF" destination="tpK-sT-yma" id="krG-lJ-Wme"/>
+                        <outlet property="loginButton" destination="FO8-2N-f4z" id="JJi-Ed-cFl"/>
+                        <outlet property="passwordTF" destination="h5O-Ub-NPg" id="slv-rL-3Eq"/>
+                        <outlet property="registerButton" destination="dmD-EE-xMF" id="oge-Cb-DJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-FP-xCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.594202898551" y="823.66071428571422"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BlX-WX-faS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="M9y-eP-K6f" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="M9y-eP-K6f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AJP-zZ-03L">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -494,6 +589,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LoginIcon" width="60" height="60"/>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="book" catalog="system" width="64" height="50"/>
         <image name="cart" catalog="system" width="64" height="50"/>
@@ -503,6 +599,6 @@
         <image name="square.split.2x1.fill" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n7G-bZ-cKj"/>
+        <segue reference="sVi-gc-Lfd"/>
     </inferredMetricsTieBreakers>
 </document>

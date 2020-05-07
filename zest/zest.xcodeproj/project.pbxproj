@@ -22,11 +22,14 @@
 		3996F723243BC8840071FCC6 /* zestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F722243BC8840071FCC6 /* zestUITests.swift */; };
 		3996F734243C175C0071FCC6 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F733243C175C0071FCC6 /* RecipeModel.swift */; };
 		3996F736243C176A0071FCC6 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F735243C176A0071FCC6 /* Recipe.swift */; };
-		3996F73D2443AF0E0071FCC6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3996F73C2443AF0E0071FCC6 /* SwiftPackageProductDependency */; };
+		3996F73D2443AF0E0071FCC6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3996F73C2443AF0E0071FCC6 /* Kingfisher */; };
 		3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F73E2443BCEA0071FCC6 /* RecipeTableViewController.swift */; };
 		3996F7432443C03B0071FCC6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7422443C03B0071FCC6 /* TableViewCell.swift */; };
 		3996F7452443CFA80071FCC6 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */; };
 		3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */; };
+		399EB50B2450BC6C00B2297C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 399EB50A2450BC6C00B2297C /* GoogleService-Info.plist */; };
+		399EB50D2459F6E400B2297C /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399EB50C2459F6E400B2297C /* SignInUpViewController.swift */; };
+		399EB50F245A585C00B2297C /* RecipeModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399EB50E245A585C00B2297C /* RecipeModelService.swift */; };
 		43C31D8FDB40C0B1E6D2F1BB /* Pods_zest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFE9C47E8986480A4263451 /* Pods_zest.framework */; };
 		B8D8746540599BBA01738202 /* Pods_zestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */; };
 		FA5B0FC04938534519B83BE6 /* Pods_zest_zestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F09B2BDD4596ADC0FC1AB0 /* Pods_zest_zestUITests.framework */; };
@@ -75,6 +78,9 @@
 		3996F7422443C03B0071FCC6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3996F7442443CFA80071FCC6 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		3996F7462443DADE0071FCC6 /* FridgeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeTableViewController.swift; sourceTree = "<group>"; };
+		399EB50A2450BC6C00B2297C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		399EB50C2459F6E400B2297C /* SignInUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
+		399EB50E245A585C00B2297C /* RecipeModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModelService.swift; sourceTree = "<group>"; };
 		42D5F3A717F7B21B2FB49B23 /* Pods_zestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E2E8107207ECF0005E4025 /* Pods-zest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zest.debug.xcconfig"; path = "Target Support Files/Pods-zest/Pods-zest.debug.xcconfig"; sourceTree = "<group>"; };
 		4FFE9C47E8986480A4263451 /* Pods_zest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3996F73D2443AF0E0071FCC6 /* BuildFile in Frameworks */,
+				3996F73D2443AF0E0071FCC6 /* Kingfisher in Frameworks */,
 				43C31D8FDB40C0B1E6D2F1BB /* Pods_zest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +146,7 @@
 		3996F6FF243BC8820071FCC6 /* zest */ = {
 			isa = PBXGroup;
 			children = (
+				399EB50A2450BC6C00B2297C /* GoogleService-Info.plist */,
 				3996F732243BC8BB0071FCC6 /* Controller */,
 				3996F731243BC8B70071FCC6 /* View */,
 				3996F730243BC8B30071FCC6 /* Model */,
@@ -179,6 +186,7 @@
 				3996F735243C176A0071FCC6 /* Recipe.swift */,
 				39792FA02448CE6800B96F25 /* Location.swift */,
 				39792FA2244924A400B96F25 /* GrocerySearchModel.swift */,
+				399EB50E245A585C00B2297C /* RecipeModelService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 				39792F982444F41800B96F25 /* DiscoverTableViewController.swift */,
 				39792F9C24465A6D00B96F25 /* AddRecipeViewController.swift */,
 				39792F9E2447D87100B96F25 /* GroceryViewController.swift */,
+				399EB50C2459F6E400B2297C /* SignInUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,7 +256,7 @@
 			);
 			name = zest;
 			packageProductDependencies = (
-				3996F73C2443AF0E0071FCC6 /* SwiftPackageProductDependency */,
+				3996F73C2443AF0E0071FCC6 /* Kingfisher */,
 			);
 			productName = zest;
 			productReference = 3996F6FD243BC8820071FCC6 /* zest.app */;
@@ -326,7 +335,7 @@
 			);
 			mainGroup = 3996F6F4243BC8820071FCC6;
 			packageReferences = (
-				3996F73B2443AF0E0071FCC6 /* RemoteSwiftPackageReference */,
+				3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 3996F6FE243BC8820071FCC6 /* Products */;
 			projectDirPath = "";
@@ -346,6 +355,7 @@
 			files = (
 				3996F70D243BC8840071FCC6 /* LaunchScreen.storyboard in Resources */,
 				3996F70A243BC8840071FCC6 /* Assets.xcassets in Resources */,
+				399EB50B2450BC6C00B2297C /* GoogleService-Info.plist in Resources */,
 				3996F708243BC8820071FCC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +530,8 @@
 				3996F7472443DADE0071FCC6 /* FridgeTableViewController.swift in Sources */,
 				39792F9F2447D87100B96F25 /* GroceryViewController.swift in Sources */,
 				3996F73F2443BCEA0071FCC6 /* RecipeTableViewController.swift in Sources */,
+				399EB50D2459F6E400B2297C /* SignInUpViewController.swift in Sources */,
+				399EB50F245A585C00B2297C /* RecipeModelService.swift in Sources */,
 				39792F9D24465A6D00B96F25 /* AddRecipeViewController.swift in Sources */,
 				3996F736243C176A0071FCC6 /* Recipe.swift in Sources */,
 			);
@@ -701,7 +713,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -719,7 +731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mainhied.zest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -852,7 +864,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3996F73B2443AF0E0071FCC6 /* RemoteSwiftPackageReference */ = {
+		3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -863,9 +875,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3996F73C2443AF0E0071FCC6 /* SwiftPackageProductDependency */ = {
+		3996F73C2443AF0E0071FCC6 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3996F73B2443AF0E0071FCC6 /* RemoteSwiftPackageReference */;
+			package = 3996F73B2443AF0E0071FCC6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

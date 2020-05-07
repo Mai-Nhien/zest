@@ -11,7 +11,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
+{
     let locationManager  = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
@@ -34,7 +35,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
     }
     
-    
+    // load stores again
     @IBAction func refreshLocations(_ sender: UIBarButtonItem) {
         loadStores()
     }
@@ -45,6 +46,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
     }
     
+    // if location changes, update user location and load stores again
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             let startMarker = Location(coordinate: location.coordinate, title: "Start Point")
@@ -56,6 +58,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
     }
     
+    // call google places api and get groceries within 1000 meters
     func loadStores() {
         if let userCoordinate = locationManager.location?.coordinate {
             GrocerySearchModel.shared.fetchNearbyGroceryStores(coordinate: userCoordinate, radius: 1000, onSuccess: {(storeArray) in
@@ -72,6 +75,7 @@ class GroceryViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
     }
     
+    // display a pin for each grocery
     func displayStores() {
         let stores = GrocerySearchModel.shared.groceryStores
         for store in stores {

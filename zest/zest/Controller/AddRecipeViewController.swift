@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseStorage
+import FirebaseAuth
 
 class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     
@@ -45,6 +47,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+    // only enable save button if all field are filled out
     func enableSubmitButton(viewText: String, fieldText: String) {
         self.saveButton.isEnabled = (viewText.count > 0
             && fieldText.count > 0 && uploadImageView.image != nil)
@@ -85,8 +88,22 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        if let title = titleTF.text, let recipe = recipeTV.text, let data = uploadImageView.image?.pngData() {
-            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: nil, recipe: recipe, imageData: data))
+        if let title = titleTF.text, let recipe = recipeTV.text, let data = uploadImageView.image?.pngData(), let user = Auth.auth().currentUser {
+            let storageRef = Storage.storage().reference().child("\(user.uid)").child("\(UUID().uuidString).png")
+            // upload the image to Firebase Storage
+            storageRef.putData(data, metadata: nil, completion: { (metadata, error) in
+                if error == nil, metadata != nil {
+                    storageRef.downloadURL{ (url, error) in
+                        if let url = url {
+                            // add recipe w the image url
+                            RecipeModel.shared.appendRecipe(recipe: Recipe(title: title, image: url.absoluteString, recipe: recipe))
+                            // let table view know that a custom recipe was added
+                            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "AddCustom")))
+                        }
+                    }
+                    
+                }
+            })
         }
         titleTF.text = ""
         recipeTV.text = ""

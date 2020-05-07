@@ -19,7 +19,6 @@ class RecipeDetailViewController: UIViewController {
     var heading = ""
     var image = ""
     var details = ""
-    var data: Data?
     var recipeIndex: Int = -1
     
     override func viewDidLoad() {
@@ -30,10 +29,8 @@ class RecipeDetailViewController: UIViewController {
             let url = URL(string: image)
             recipeImage.kf.setImage(with: url)
         }
-        if let imageData = data {
-            recipeImage.image = UIImage(data: imageData)
-        }
         
+        // If displaying a recipe result, show save button so user can save to personal recipes
         if recipeIndex >= 0 {
             saveButton = UIBarButtonItem(title: "Save Recipe", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveRecipe))
             navigationItem.rightBarButtonItem = saveButton

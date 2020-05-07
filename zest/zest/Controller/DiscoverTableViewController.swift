@@ -24,6 +24,7 @@ class DiscoverTableViewController: UITableViewController {
         loadResults()
     }
     
+    // get recipes from the spoonacular API
     func loadResults() {
         RecipeModel.shared.getNewRecipes(onSuccess: {(recipeArray) in
             RecipeModel.shared.recipeResults = recipeArray
