@@ -8,13 +8,14 @@
 
 import Foundation
 import FirebaseAuth
+import Keys
 
 class RecipeModel {
     static let shared = RecipeModel()
     var savedRecipes: [Recipe]
     var recipeResults: [Recipe]
     var fridge: [String]
-    let ACCESS_KEY = "052a4b2f0bef41138415628709c0d811"
+    let ACCESS_KEY = ZestKeys().recipeKey
     let BASE_URL = "https://api.spoonacular.com/"
     
     init () {

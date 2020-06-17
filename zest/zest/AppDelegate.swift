@@ -9,6 +9,7 @@
 import UIKit
 import GooglePlaces
 import Firebase
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSPlacesClient.provideAPIKey("AIzaSyCyfC5LF58QGmrEToRJQ7oG-2bZei_d2u4")
+        GMSPlacesClient.provideAPIKey(ZestKeys().placesKey)
         
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(red: 199/255.0, green: 126/255.0, blue: 97/255.0, alpha: 0.85)

@@ -8,10 +8,11 @@
 
 import Foundation
 import CoreLocation
+import Keys
 
 class GrocerySearchModel {
     var groceryStores: [PlaceData]
-    let API_KEY = "AIzaSyCyfC5LF58QGmrEToRJQ7oG-2bZei_d2u4"
+    let API_KEY = ZestKeys().placesKey
     static let shared = GrocerySearchModel()
     
     init() {
